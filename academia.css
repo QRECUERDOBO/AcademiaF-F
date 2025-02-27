@@ -18,6 +18,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+.cta-button-whatsapp {
+    display: inline-block;
+    background-color: #25D366; /* Color oficial de WhatsApp */
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cta-button-whatsapp:hover {
+    background-color: #128C7E; /* Otro tono de verde de WhatsApp */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button-whatsapp i {
+    margin-right: 8px;
+}
+
 
 html {
     scroll-behavior: smooth;
