@@ -2,23 +2,28 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>Academia Fiorella y Felipe</title>
     <link rel="stylesheet" href="academia.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
     <header>
         <nav class="navbar">
             <div class="logo">
-                <h1>ACADEMIA FIORELLA Y FELIPE</h1>
+                <h1>ACADEMIA <span>FIORELLA Y FELIPE</span></h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio" class="nav-link"><i class="ri-home-4-line"></i> Inicio</a></li>
+                <li><a href="#cursos" class="nav-link"><i class="ri-book-open-line"></i> Cursos</a></li>
+                <li><a href="#contacto" class="nav-link"><i class="ri-message-3-line"></i> Contacto</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -28,243 +33,114 @@
         </nav>
     </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">¡Bienvenidos a la Academia Fiorella y Felipe!</h1>
-            <p class="hero-subtitle">Formando niños felices y talentosos desde 2020</p>
-            <a href="#cursos" class="cta-button">Ver Nuestros Cursos</a>
-        </div>
-        <div class="hero-image">
-            <img src="imagenperfil.jpg" alt="Niños felices en la academia">
-        </div>
-    </section>
-
-    <section id="intro" class="scroll-animation-section">
-        <div class="intro-content">
-            <h2>Cursos para niños y niñas de 4 a 13 años</h2>
-            <p>En nuestra academia nos enfocamos en desarrollar habilidades artísticas, comunicativas y expresivas que acompañarán a tus hijos durante toda su vida.</p>
-        </div>
-        <div class="intro-image">
-            <img src="imagenperfil.jpg" alt="Niños aprendiendo en la academia">
-        </div>
-    </section>
-
-    <section id="cursos">
-        <h2 class="section-title">Nuestros Cursos</h2>
-        <p class="section-subtitle">Marzo 2025</p>
-        
-        <!-- Combo PREMIUM -->
-        <div class="curso-card" id="combo-premium">
-            <div class="curso-info">
-                <h3>1. Combo PREMIUM</h3>
-                <div class="curso-content">
-                    <div class="video-container">
-                        <img src="video1.mp4" alt="Clase Combo Premium" class="placeholder-video">
-                        <div class="play-button">▶</div>
-                    </div>
-                    <div class="curso-detalles">
-                        <div class="horarios">
-                            <h4>Turnos Disponibles:</h4>
-                            <div class="turno">
-                                <h5>Entre semana:</h5>
-                                <ul>
-                                    <li>Lunes: 15:30 – 17:30</li>
-                                    <li>Miércoles: 15:30 – 17:30</li>
-                                    <li>Viernes: 16:30 – 17:30</li>
-                                    <li>Precio mensual: 500 Bs</li>
-                                </ul>
-                            </div>
-                            <div class="turno">
-                                <h5>Intensivo (sólo sábados):</h5>
-                                <ul>
-                                    <li>Horario: 9:00 – 12:00</li>
-                                    <li>Precio mensual: 380 Bs</li>
-                                    <li>Opción con merienda incluida: 430 Bs</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="beneficios">
-                    <h4>Beneficios para los niños:</h4>
-                    <p>El Combo Premium combina todas nuestras disciplinas, ofreciendo un desarrollo integral en comunicación, expresión corporal y confianza. Los niños mejoran sus habilidades sociales, aumentan su creatividad y fortalecen su capacidad para trabajar en equipo.</p>
-                </div>
-                <div class="galeria">
-                    <img src="imagen1.jpg" alt="Imagen 1">
-                    <img src="imagen2.jpg" alt="Imagen 2">
-                    <img src="imagen3.jpg" alt="Imagen 3">
-                </div>
-                <!-- Botón de WhatsApp -->
-                <a href="https://wa.me/59161354377?text=Quiero%20este%20curso%20Combo%20PREMIUM%20como%20puedo%20realizar%20la%20inscripcion." target="_blank">
-                    <button class="cta-button-whatsapp">¡Inscríbete Ahora!</button>
-                </a>
-            </div>
-        </div>
-
-        <!-- Clases de Baile -->
-        <div class="curso-card" id="baile">
-            <div class="curso-info">
-                <h3>2. Clases de Baile</h3>
-                <div class="curso-content">
-                    <div class="video-container">
-                        <img src="video2.mp4" alt="Clase de Baile" class="placeholder-video">
-                        <div class="play-button">▶</div>
-                    </div>
-                    <div class="curso-detalles">
-                        <div class="horarios">
-                            <h4>Turnos Disponibles:</h4>
-                            <div class="turno">
-                                <h5>Entre semana:</h5>
-                                <ul>
-                                    <li>Días: Lunes, Miércoles y Viernes</li>
-                                    <li>Horario: 17:30 – 18:30</li>
-                                    <li>Precio mensual: 380 Bs</li>
-                                </ul>
-                            </div>
-                            <div class="turno">
-                                <h5>Intensivo (sólo sábados):</h5>
-                                <ul>
-                                    <li>Horario: 10:30 – 12:00</li>
-                                    <li>Precio mensual: 300 Bs</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="beneficios">
-                    <h4>Beneficios para los niños:</h4>
-                    <p>Las clases de baile mejoran la coordinación motora, ritmo y equilibrio. Los niños desarrollan disciplina, memoria y concentración mientras liberan energía de forma positiva. El baile también fortalece su autoestima y les ayuda a expresar emociones a través del movimiento.</p>
-                </div>
-                <div class="galeria">
-                    <img src="iamgen4.jpg" alt="Imagen 1">
-                    <img src="imagen5.jpg" alt="Imagen 2">
-                    <img src="imagen6.jpg" alt="Imagen 3">
-                </div>
-                <!-- Botón de WhatsApp -->
-                <a href="https://wa.me/59161354377?text=Quiero%20este%20curso%20Clases%20De%20Baile%20como%20puedo%20realizar%20la%20inscripcion." target="_blank">
-                    <button class="cta-button-whatsapp">¡Inscríbete Ahora!</button>
-                </a>
-            </div>
-        </div>
-
-        <!-- Clases de Oratoria -->
-        <div class="curso-card" id="oratoria">
-            <div class="curso-info">
-                <h3>3. Clases de Oratoria</h3>
-                <div class="curso-content">
-                    <div class="video-container">
-                        <img src="video3.mp4" alt="Clase de Oratoria" class="placeholder-video">
-                        <div class="play-button">▶</div>
-                    </div>
-                    <div class="curso-detalles">
-                        <div class="horarios">
-                            <h4>Turnos Disponibles:</h4>
-                            <div class="turno">
-                                <h5>Entre semana:</h5>
-                                <ul>
-                                    <li>Días: Lunes y Miércoles</li>
-                                    <li>Horario: 15:30 – 17:30</li>
-                                    <li>Precio mensual: 380 Bs</li>
-                                </ul>
-                            </div>
-                            <div class="turno">
-                                <h5>Intensivo (sólo sábados):</h5>
-                                <ul>
-                                    <li>Horario: Sábado de 9:00 a 10:15</li>
-                                    <li>Precio mensual: 300 Bs</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="beneficios">
-                    <h4>Beneficios para los niños:</h4>
-                    <p>Las clases de oratoria desarrollan habilidades comunicativas, pensamiento crítico y confianza al hablar en público. Los niños mejoran su vocabulario, claridad de expresión y capacidad para estructurar ideas. Estas habilidades son esenciales para su futuro académico y profesional.</p>
-                </div>
-                <div class="galeria">
-                    <img src="imagen7.jpg" alt="Imagen 1">
-                    <img src="imagen8.jpg" alt="Imagen 2">
-                    <img src="imagen9.jpg" alt="Imagen 3">
-                </div>
-                <!-- Botón de WhatsApp -->
-                <a href="https://wa.me/59161354377?text=Quiero%20este%20curso%20Clases%20De%20Oratoria%20como%20puedo%20realizar%20la%20inscripcion." target="_blank">
-                    <button class="cta-button-whatsapp">¡Inscríbete Ahora!</button>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="promocion" class="scroll-animation-section">
-        <div class="promocion-content">
-            <h2>¡PROMOCIÓN ESPECIAL!</h2>
-            <p class="promocion-text">SI INSCRIBE A DOS O MÁS NIÑOS TODOS LOS CURSOS TIENEN DESCUENTO 😍👌🏻</p>
-            <a href="#contacto" class="cta-button">¡Inscríbete Ahora!</a>
-        </div>
-    </section>
-
-    <section id="contacto">
-        <h2 class="section-title">Contáctanos</h2>
-        <div class="contacto-container">
-            <div class="contacto-info">
-                <p>Si tiene alguna duda o consulta estamos para ayudarle 🫡🗣</p>
-                <div class="info-item">
-                    <i class="icon">📍</i>
-                    <p>Av. Principal #123, Ciudad</p>
-                </div>
-                <div class="info-item">
-                    <i class="icon">📞</i>
-                    <p>+123 456 7890</p>
-                </div>
-                <div class="info-item">
-                    <i class="icon">✉️</i>
-                    <p>info@academiafiorellayfelipe.com</p>
+    <main>
+        <section id="hero" class="reveal">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Academia <br>Fiorella y Felipe</h1>
+                <p class="hero-subtitle">Transformando sueños en habilidades</p>
+                <div class="hero-cta">
+                    <a href="#cursos" class="cta-button primary-btn">Descubre Nuestros Cursos</a>
+                    <a href="#contacto" class="cta-button secondary-btn">Contáctanos</a>
                 </div>
             </div>
-            <div class="contacto-form">
-                <form>
-                    <div class="form-group">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" required>
+            <div class="hero-image">
+                <img src="imagenperfil.jpg" alt="Niños felices en la academia">
+            </div>
+        </section>
+
+        <section id="cursos" class="reveal">
+            <div class="section-header">
+                <h2>Nuestros Cursos</h2>
+                <p>Desarrollo integral para niños y jóvenes</p>
+            </div>
+
+            <div class="curso-grid">
+                <div class="curso-card premium reveal">
+                    <div class="curso-icon"><i class="ri-star-fill"></i></div>
+                    <h3>Combo Premium</h3>
+                    <p>Desarrollo integral con todas nuestras disciplinas</p>
+                    <div class="curso-details">
+                        <div class="curso-price">Desde 380 Bs</div>
+                        <a href="#" class="curso-more">Más Detalles</a>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" required>
+                </div>
+
+                <div class="curso-card baile reveal">
+                    <div class="curso-icon"><i class="ri-dancer-line"></i></div>
+                    <h3>Clases de Baile</h3>
+                    <p>Expresión corporal y ritmo para niños</p>
+                    <div class="curso-details">
+                        <div class="curso-price">Desde 300 Bs</div>
+                        <a href="#" class="curso-more">Más Detalles</a>
                     </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono:</label>
-                        <input type="tel" id="telefono">
+                </div>
+
+                <div class="curso-card oratoria reveal">
+                    <div class="curso-icon"><i class="ri-mic-line"></i></div>
+                    <h3>Clases de Oratoria</h3>
+                    <p>Comunicación y confianza para niños</p>
+                    <div class="curso-details">
+                        <div class="curso-price">Desde 300 Bs</div>
+                        <a href="#" class="curso-more">Más Detalles</a>
                     </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" rows="4" required></textarea>
-                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios" class="reveal">
+            <div class="section-header">
+                <h2>Lo Que Dicen Nuestros Padres</h2>
+            </div>
+            <div class="testimonios-slider">
+                <div class="testimonios-card">
+                    <p>"Mi hijo ha mejorado enormemente su confianza y habilidades sociales"</p>
+                    <div class="testimonio-autor">- María Rodríguez</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="reveal">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <p>¿Listo para comenzar la aventura?</p>
+            </div>
+            <div class="contacto-container">
+                <form id="contact-form" class="contacto-form">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Teléfono">
+                    <textarea placeholder="Tu mensaje" required></textarea>
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
                 </form>
+                <div class="contacto-info">
+                    <div class="info-item">
+                        <i class="ri-map-pin-line"></i>
+                        <span>Av. Principal #123, Ciudad</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="ri-phone-line"></i>
+                        <span>+123 456 7890</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="ri-mail-line"></i>
+                        <span>info@academiafiorellayfelipe.com</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <h3>ACADEMIA FIORELLA Y FELIPE</h3>
+                <h3>Fiorella y Felipe</h3>
                 <p>Formando niños felices y talentosos</p>
             </div>
-            <div class="footer-links">
-                <h4>Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#cursos">Cursos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
             <div class="footer-social">
-                <h4>Síguenos</h4>
-                <div class="social-icons">
-                    <a href="#" class="social-icon">FB</a>
-                    <a href="#" class="social-icon">IG</a>
-                    <a href="#" class="social-icon">YT</a>
-                </div>
+                <a href="#" class="social-link"><i class="ri-facebook-circle-fill"></i></a>
+                <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                <a href="#" class="social-link"><i class="ri-youtube-line"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
