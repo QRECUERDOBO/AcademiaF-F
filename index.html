@@ -2,129 +2,51 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia Fiorella y Felipe</title>
     <link rel="stylesheet" href="academia.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-    <div class="loader">
-        <div class="spinner"></div>
-    </div>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <h1>ACADEMIA <span>FIORELLA Y FELIPE</span></h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#inicio" class="nav-link"><i class="ri-home-4-line"></i> Inicio</a></li>
-                <li><a href="#cursos" class="nav-link"><i class="ri-book-open-line"></i> Cursos</a></li>
-                <li><a href="#contacto" class="nav-link"><i class="ri-message-3-line"></i> Contacto</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+    <header class="navbar">
+        <h1>Academia Fiorella y Felipe</h1>
+        <div class="burger">&#9776;</div>
+        <nav class="nav-links">
+            <a href="#cursos">Cursos</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
-    <main>
-        <section id="hero" class="reveal">
-            <div class="hero-background"></div>
-            <div class="hero-content">
-                <h1 class="hero-title">Academia <br>Fiorella y Felipe</h1>
-                <p class="hero-subtitle">Transformando sueños en habilidades</p>
-                <div class="hero-cta">
-                    <a href="#cursos" class="cta-button primary-btn">Descubre Nuestros Cursos</a>
-                    <a href="#contacto" class="cta-button secondary-btn">Contáctanos</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="imagenperfil.jpg" alt="Niños felices en la academia">
-            </div>
-        </section>
+    <section id="cursos">
+        <h2>Nuestros Cursos</h2>
 
-        <section id="cursos" class="reveal">
-            <div class="section-header">
-                <h2>Nuestros Cursos</h2>
-                <p>Desarrollo integral para niños y jóvenes</p>
-            </div>
+        <div class="curso-card" id="combo-premium">
+            <h3>Combo PREMIUM</h3>
+            <img src="imagen1.jpg" alt="Combo Premium">
+            <p>Horario: Lunes, Miércoles, Viernes (15:30 – 17:30)</p>
+            <button class="whatsapp-button" data-plan="Combo PREMIUM">Inscribirme por WhatsApp</button>
+        </div>
 
-            <div class="curso-grid">
-                <div class="curso-card premium reveal">
-                    <div class="curso-icon"><i class="ri-star-fill"></i></div>
-                    <h3>Combo Premium</h3>
-                    <p>Desarrollo integral con todas nuestras disciplinas</p>
-                    <div class="curso-details">
-                        <div class="curso-price">Desde 380 Bs</div>
-                        <a href="#" class="curso-more">Más Detalles</a>
-                    </div>
-                </div>
+        <div class="curso-card" id="baile">
+            <h3>Clases de Baile</h3>
+            <img src="imagen2.jpg" alt="Baile">
+            <p>Horario: Lunes, Miércoles, Viernes (17:30 – 18:30)</p>
+            <button class="whatsapp-button" data-plan="Clases de Baile">Inscribirme por WhatsApp</button>
+        </div>
 
-                <div class="curso-card baile reveal">
-                    <div class="curso-icon"><i class="ri-dancer-line"></i></div>
-                    <h3>Clases de Baile</h3>
-                    <p>Expresión corporal y ritmo para niños</p>
-                    <div class="curso-details">
-                        <div class="curso-price">Desde 300 Bs</div>
-                        <a href="#" class="curso-more">Más Detalles</a>
-                    </div>
-                </div>
-
-                <div class="curso-card oratoria reveal">
-                    <div class="curso-icon"><i class="ri-mic-line"></i></div>
-                    <h3>Clases de Oratoria</h3>
-                    <p>Comunicación y confianza para niños</p>
-                    <div class="curso-details">
-                        <div class="curso-price">Desde 300 Bs</div>
-                        <a href="#" class="curso-more">Más Detalles</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonios" class="reveal">
-            <div class="section-header">
-                <h2>Lo Que Dicen Nuestros Padres</h2>
-            </div>
-                <div class="contacto-info">
-                    <div class="info-item">
-                        <i class="ri-map-pin-line"></i>
-                        <span>Av. Principal #123, Ciudad</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="ri-phone-line"></i>
-                        <span>+123 456 7890</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="ri-mail-line"></i>
-                        <span>info@academiafiorellayfelipe.com</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        <div class="curso-card" id="oratoria">
+            <h3>Clases de Oratoria</h3>
+            <img src="imagen3.jpg" alt="Oratoria">
+            <p>Horario: Lunes y Miércoles (15:30 – 17:30)</p>
+            <button class="whatsapp-button" data-plan="Clases de Oratoria">Inscribirme por WhatsApp</button>
+        </div>
+    </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h3>Fiorella y Felipe</h3>
-                <p>Formando niños felices y talentosos</p>
-            </div>
-            <div class="footer-social">
-                <a href="#" class="social-link"><i class="ri-facebook-circle-fill"></i></a>
-                <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
-                <a href="#" class="social-link"><i class="ri-youtube-line"></i></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Academia Fiorella y Felipe. Todos los derechos reservados.</p>
-        </div>
+        <p>&copy; 2025 Academia Fiorella y Felipe. Todos los derechos reservados.</p>
     </footer>
 
     <script src="academia.js"></script>
