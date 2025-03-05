@@ -1,98 +1,82 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Navbar Toggle for Mobile
+document.addEventListener('DOMContentLoaded', function() {
+    // GSAP Animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".curso-card").forEach((card) => {
+        gsap.fromTo(
+            card,
+            { opacity: 0, y: 50 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse",
+                },
+            }
+        );
+    });
+
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile Menu Toggle
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
-
     burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        burger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+        burger.classList.toggle('toggle');
     });
 
-    // Close menu when link is clicked
-    document.querySelectorAll('.nav-link').forEach(link => {
+    // Close menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            burger.classList.remove('active');
+            navLinks.classList.remove('open');
+            burger.classList.remove('toggle');
         });
     });
 
-    // Reveal Animations
-    const revealElements = document.querySelectorAll('.reveal');
-
-    const revealOnScroll = () => {
-        revealElements.forEach(element => {
-            const windowHeight = window.innerHeight;
-            const elementTop = element.getBoundingClientRect().top;
-            const revealPoint = 150;
-
-            if (elementTop < windowHeight - revealPoint) {
-                element.classList.add('active');
-            } else {
-                element.classList.remove('active');
-            }
+    // WhatsApp Button Functionality
+    document.querySelectorAll(".whatsapp-button").forEach(button => {
+        button.addEventListener("click", function () {
+            const planName = this.getAttribute("data-plan");
+            const message = `Quiero este plan ${planName} como puedo inscribirme?`;
+            const whatsappURL = `https://wa.me/59172645173?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, "_blank");
         });
-    };
-
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Initial check
-
-    // Form Submission Simulation
-    const contactForm = document.getElementById('contact-form');
-    
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Simulate form submission
-        const submitBtn = contactForm.querySelector('.submit-btn');
-        submitBtn.textContent = 'Enviando...';
-        submitBtn.disabled = true;
-
-        setTimeout(() => {
-            // Reset form
-            submitBtn.textContent = 'Mensaje Enviado';
-            
-            // Optional: Clear form fields
-            contactForm.reset();
-            
-            // Re-enable button after few seconds
-            setTimeout(() => {
-                submitBtn.textContent = 'Enviar Mensaje';
-                submitBtn.disabled = false;
-            }, 3000);
-        }, 1500);
     });
 
-    // Smooth Scrolling
+    // Smooth Scrolling for Navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener("click", function (e) {
             e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: "smooth",
                 });
             }
         });
     });
 
-    // Parallax Effect on Hero Section
-    const heroSection = document.getElementById('hero');
-    
-    window.addEventListener('scroll', () => {
-        const scrollPosition = window.pageYOffset;
-        const heroBackground = document.querySelector('.hero-background');
-        
-        // Parallax background
-        heroBackground.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-    });
-
-    // Remove Loader after page load
-    window.addEventListener('load', () => {
-        const loader = document.querySelector('.loader');
-        loader.style.display = 'none';
+    // Image Hover Effect in Gallery
+    const galleries = document.querySelectorAll(".galeria img");
+    galleries.forEach(img => {
+        img.addEventListener("mouseenter", () => {
+            img.style.transform = "scale(1.05)";
+        });
+        img.addEventListener("mouseleave", () => {
+            img.style.transform = "scale(1)";
+        });
     });
 });
