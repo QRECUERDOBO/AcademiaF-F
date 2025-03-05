@@ -120,12 +120,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (scrollPosition < window.innerHeight) {
             const heroImage = document.querySelector('.hero-image');
             if (heroImage) {
-                heroImage.style.transform = translateY(${scrollPosition * 0.1}px);
+                heroImage.style.transform = `translateY(${scrollPosition * 0.1}px)`;
             }
             
             const heroContent = document.querySelector('.hero-content');
             if (heroContent) {
-                heroContent.style.transform = translateY(${scrollPosition * 0.05}px);
+                heroContent.style.transform = `translateY(${scrollPosition * 0.05}px)`;
             }
         }
     });
@@ -196,14 +196,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 const successMessage = document.createElement('div');
                 successMessage.classList.add('success-message');
-                successMessage.innerHTML =  
+                successMessage.innerHTML = ` 
                     <div style="text-align: center; padding: 2rem;">
                         <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
                         <h3 style="color: var(--color-morado); margin-bottom: 1rem;">¡Mensaje Enviado!</h3>
                         <p>Gracias por contactarnos. Nos pondremos en contacto contigo lo antes posible.</p>
                         <button id="reset-form" style="margin-top: 1.5rem; padding: 0.5rem 1.5rem; background-color: var(--color-celeste); color: white; border: none; border-radius: 5px; cursor: pointer;">Enviar otro mensaje</button>
                     </div>
-                ;
+                `;
                 
                 this.appendChild(successMessage);
                 
