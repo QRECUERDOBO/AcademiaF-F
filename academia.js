@@ -103,6 +103,14 @@ window.addEventListener('scroll', function() {
     }
 });
 
+    document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".galeria-container").forEach(galeria => {
+        let clone = galeria.cloneNode(true); // Clona las imágenes para que el efecto parezca infinito
+        galeria.parentElement.appendChild(clone);
+    });
+});
+
+
 
     // Smooth scrolling para los enlaces de navegación
    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
