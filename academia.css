@@ -344,12 +344,26 @@ section {
   margin-bottom: 1.5rem;
 }
 
+/* Ajuste de videos para que sean responsivos */
 .video-container {
-  flex: 1;
-  min-width: 300px;
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
+    width: 100%;
+    max-width: 400px; /* Ajusta según lo que necesites */
+    margin: 0 auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ajuste específico para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .video-container {
+        max-width: 300px; /* Reducimos el tamaño en móviles */
+    }
 }
 
 .play-button {
