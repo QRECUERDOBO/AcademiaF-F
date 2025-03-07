@@ -16,6 +16,33 @@
   --radius: 8px;
 }
 
+#galeria-equipo {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--gray-light);
+}
+
+.galeria-equipo {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.galeria-equipo img {
+    width: 22%;
+    max-width: 250px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.galeria-equipo img:hover {
+    transform: scale(1.05);
+}
+
+
 #nosotros {
     text-align: center;
     background-color: var(--gray-light);
