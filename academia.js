@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelector('.nav-links');
     const burger = document.querySelector('.burger');
-    const scrollSections = document.querySelectorAll('.scroll-animation-section, #nosotros, #fundadores, #equipo');
+    const scrollSections = document.querySelectorAll('.scroll-animation-section, #nosotros, #fundadores, #equipo, #cursos');
     const cursoCards = document.querySelectorAll('.curso-card');
     const playButtons = document.querySelectorAll('.play-button');
 
@@ -31,6 +31,26 @@ document.addEventListener('DOMContentLoaded', function() {
         animateOnScroll();
     });
 
+// Animación de fade-in progresivo para la sección de fundadores
+const fundadoresItems = document.querySelectorAll('#fundadores .fundador');
+
+fundadoresItems.forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(15px)';
+    item.style.transition = `opacity 0.7s ease ${index * 0.2}s, transform 0.7s ease ${index * 0.2}s`;
+});
+
+window.addEventListener('scroll', function() {
+    const fundadoresSection = document.querySelector('#fundadores');
+    if (fundadoresSection.getBoundingClientRect().top < window.innerHeight * 0.8) {
+        fundadoresItems.forEach(item => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+        });
+    }
+});
+
+    
     // Función para animar elementos al hacer scroll
     function animateOnScroll() {
         scrollSections.forEach(section => {
@@ -65,16 +85,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Smooth scrolling para los enlaces de navegación
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
+            window.scrollTo({
+                top: target.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
     });
+  });
 });
