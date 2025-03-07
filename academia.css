@@ -594,6 +594,42 @@ footer {
   #hero, #intro {
     flex-direction: column;
   }
+
+  /* Contenedor del carrusel dentro de cada curso */
+.curso-card .galeria {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+}
+
+/* Contenedor de las imágenes que se desplazarán */
+.curso-card .galeria-container {
+    display: inline-flex;
+    animation: desplazamiento 10s linear infinite;
+}
+
+/* Imágenes dentro del carrusel */
+.curso-card .galeria img {
+    width: 150px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    margin: 0 10px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de hover en las imágenes */
+.curso-card .galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* Animación para el desplazamiento infinito */
+@keyframes desplazamiento {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
   
   #hero {
     height: auto;
