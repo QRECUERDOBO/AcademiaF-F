@@ -84,6 +84,26 @@ window.addEventListener('scroll', function() {
         }
     });
 
+    // Animación de imágenes en la galería del equipo
+const galeriaItems = document.querySelectorAll('.galeria-equipo img');
+
+galeriaItems.forEach((img, index) => {
+    img.style.opacity = '0';
+    img.style.transform = 'translateY(15px)';
+    img.style.transition = `opacity 0.7s ease ${index * 0.2}s, transform 0.7s ease ${index * 0.2}s`;
+});
+
+window.addEventListener('scroll', function() {
+    const galeriaSection = document.querySelector('#galeria-equipo');
+    if (galeriaSection && galeriaSection.getBoundingClientRect().top < window.innerHeight * 0.8) {
+        galeriaItems.forEach(img => {
+            img.style.opacity = '1';
+            img.style.transform = 'translateY(0)';
+        });
+    }
+});
+
+
     // Smooth scrolling para los enlaces de navegación
    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
