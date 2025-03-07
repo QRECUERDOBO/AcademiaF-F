@@ -85,15 +85,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Función para animar elementos al hacer scroll
-    function animateOnScroll() {
-        scrollSections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (sectionTop < windowHeight * 0.75) {
-                section.classList.add('show');
-            }
-        });
+   function animateOnScroll() {
+    scrollSections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        console.log("Section:", section.id, "Position:", sectionTop); // <-- AGREGADO
+
+        if (sectionTop < windowHeight * 0.75) {
+            section.classList.add('show');
+            console.log("Sección activada:", section.id); // <-- AGREGADO
+        }
+    });
+}
         
         cursoCards.forEach((card, index) => {
             const cardTop = card.getBoundingClientRect().top;
